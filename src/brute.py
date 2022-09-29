@@ -412,7 +412,7 @@ def metode_reguler(user, pwx, url):
 		try:
 			pw = pw.lower()
 			ses=requests.Session()
-			proxy= {"http": "socks4://{random.choice(prox)}"}
+			proxy= {"http": "socks5://{random.choice(prox)}"}
 			headers1= {
 				"Host":url,
 				"upgrade-insecure-requests":"1",
@@ -491,7 +491,7 @@ def metode_validate(user, pwx, url):
 		try:
 			pw = pw.lower()
 			ses=requests.Session()
-			proxy= {"http": "socks4://{random.choice(prox)}"}
+			proxy= {"http": "socks5://{random.choice(prox)}"}
 			headers1= {
 				"Host":url,
 				"upgrade-insecure-requests":"1",
