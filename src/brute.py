@@ -407,9 +407,9 @@ def otomatis_validate():
 ###----------[ METODE CRACK ]---------- ###
 def metode_reguler(user, pwx, url):
 	global ok,cp,loop
-	redmi = open('data/mass.txt','r').read().splitlines()
+	redmi = open('data/mas.txt','r').read().splitlines()
 	ua = random.choice(redmi)
-	nokia = open('data/ugent.txt','r').read().splitlines()
+	nokia = open('data/nokia1.txt','r').read().splitlines()
 	ua2 = random.choice(nokia)
 	prox = open("data/proxy.txt","r").read().splitlines()
 	prog.update(des,description=f"crack {str(loop)}/{len(id2)} OK : {H}{len(ok)}{N} CP : {K}{len(cp)}{N}")
@@ -489,7 +489,7 @@ def metode_reguler(user, pwx, url):
 	
 def metode_validate(user, pwx, url):
 	global ok,cp,loop
-	redmi = open('data/mass.txt','r').read().splitlines()
+	redmi = open('data/mas.txt','r').read().splitlines()
 	ua = random.choice(redmi)
 	nokia = open('data/nokia1.txt','r').read().splitlines()
 	ua2 = random.choice(nokia)
