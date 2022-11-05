@@ -407,7 +407,7 @@ def otomatis_validate():
 ###----------[ METODE CRACK ]---------- ###
 def metode_reguler(user, pwx, url):
 	global ok,cp,loop
-	redmi = open('data/fb1_000003.txt','r').read().splitlines()
+	redmi = open('data/mass.txt','r').read().splitlines()
 	ua = random.choice(redmi)
 	nokia = open('data/ugent.txt','r').read().splitlines()
 	ua2 = random.choice(nokia)
@@ -489,7 +489,7 @@ def metode_reguler(user, pwx, url):
 	
 def metode_validate(user, pwx, url):
 	global ok,cp,loop
-	redmi = open('data/fb1_000008.txt','r').read().splitlines()
+	redmi = open('data/mass.txt','r').read().splitlines()
 	ua = random.choice(redmi)
 	nokia = open('data/nokia1.txt','r').read().splitlines()
 	ua2 = random.choice(nokia)
