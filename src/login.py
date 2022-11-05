@@ -87,9 +87,30 @@ def logo():
   //  \__  |: \.        |(|  _  \\  // ___)     
  (:   / "\ |.  \    /:  ||: |_)  :)(:  (      
   \_______)|___|\__/|___|(_______/  \__/      Made By {M2}Alzwage {P2}Coder""",title=f"{P2}{waktu()}",style=f"{color_table}"))
-  
 
-###----------[ LOGIN ]---------- ###
+def chk():
+  uuid = str(os.geteuid()) + str(os.getlogin()) 
+  id = "|".join(uuid)
+  print("\n\n\x1b[37;1m  YOUR ID : \033[94m"+id) 
+  try: 
+    httpCaht = requests.get("https://pastebin.com/raw/NWjcXQPb").text 
+    if id in httpCaht: 
+      print("\033[92m  YOUR ID IS ACTIVE. .......\033[97m") 
+      msg = str(os.geteuid()) 
+      time.sleep(1) 
+      pass 
+    else: 
+      print("\033[0;96m YOUR ID IS NOT ACTIVE COPYðŸ‘† AND SEND ME MESSAGE ON WHATSAPP \033[0;91m#NOT FREE!!!") 
+      os.system('xdg-open  https://wa.me/218913040821?text=*Hello*%2C%20*AhmedAlzwage*%20*i*%20*want*%20*to*%20*bay*%20*your*%20*command*%20*Tools*%20*UPDATED*')
+      time.sleep(1) 
+      sys.exit() 
+  except: 
+    sys.exit() 
+    if name == '__main__': 
+     print (logo)
+     chk() 
+     
+chk() 
 def login():
 	logo()
 	nama = "-"

